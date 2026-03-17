@@ -63,7 +63,16 @@ jupyter lab --ip=0.0.0.0 --no-browser
 
 Код сервиса рекомендаций находится в файле `recommendations_service.py`.
 
-<*укажите здесь необходимые шаги для запуска сервиса рекомендаций*>
+```
+# запуск Event Service
+uvicorn events_service:app --port 8020
+
+# запуск Features Service
+uvicorn features_service:app --port 8010
+
+# запуск Recommendations Service
+uvicorn recommendations_service:app
+```
 
 # Инструкции для тестирования сервиса
 
